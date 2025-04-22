@@ -54,12 +54,24 @@
                 background-color: #128C7E;
                 color: white;
             }
+            .btn-extra {
+                background-color: #FF6B00;
+                color: white;
+                border: none;
+            }
+            .btn-extra:hover {
+                background-color: #FF8533;
+                color: white;
+            }
             #instrucciones {
                 display: none;
                 background: rgba(0,0,0,0.8);
                 border-radius: 10px;
                 padding: 20px;
                 margin: 15px 0;
+            }
+            #instrucciones.visible {
+                display: block;
             }
             .instrucciones-lista {
                 text-align: left;
@@ -97,8 +109,9 @@
         <header class="header-custom text-center py-4">
             <div class="container">
                 <img src="./image/solomitosLogo.png" alt="Logo" class="img-fluid mb-2" style="max-width: 280px;">
-                <h1 class="h4">NUESTRO MENÚ</h1>
-                <h1 class="Horario">Horario: Lunes a domingo de 12pm a 10pm</h1>
+                <h1 class="h4">MENÚ BURGER MASTER</h1>
+                <h1 class="Horario">Fecha: del 28 de abril al 4 de mayo</h1>
+                <h1 class="Horario">Horario:  de 12pm a 10pm</h1>
             </div>
         </header>
 
@@ -108,10 +121,23 @@
                     <div class="burger-card">
                         <img src="./image/hamburguesa.jpg" alt="The Fest Burger" class="burger-img">
                         <div class="p-4">
-                            <h3 class="text-white">Solomitos The Fest Burger</h3>
-                            <p class="text-white mb-4">¡Participando en el Burger Master de Tulio Recomienda!</p>
+                            <h3 class="text-white">Solomitos The Fest Burger $19.000</h3>
+                            <p class="text-white mb-4"></p>
                             
                             <div class="d-grid gap-3">
+                                <div class="row g-2">
+                                    <div class="col-6">
+                                        <a href="adiciones.html" class="btn btn-extra w-100 py-3">
+                                            Adiciones
+                                        </a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="bebidas.html" class="btn btn-extra w-100 py-3">
+                                            Bebidas
+                                        </a>
+                                    </div>
+                                </div>
+
                                 <button onclick="mostrarInstrucciones()" class="btn btn-warning py-3">
                                     ¿Cómo votar por esta Hamburguesa?
                                 </button>
@@ -132,8 +158,11 @@
                                     </div>
                                 </div>
 
+                                <p class="text-white text-center mb-2">
+                                    ¡Participa por una cena romántica para dos personas, si envias la captura de tu calificación y nos dejas un comentario en la App del concurso!
+                                </p>
                                 <a href="https://wa.me/+573136882500?text=Hola,%20quiero%20un%20The%20fest%20burger." class="btn btn-whatsapp py-3" target="_blank">
-                                    Pedir por WhatsApp domicilio
+                                    Enviar calificación
                                 </a>
                             </div>
                         </div>
@@ -172,7 +201,22 @@
         <script>
             function mostrarInstrucciones() {
                 const instrucciones = document.getElementById("instrucciones");
-                instrucciones.style.display = instrucciones.style.display === "none" ? "block" : "none";
+                const boton = document.querySelector('.btn-warning');
+                
+                instrucciones.classList.toggle('visible');
+                boton.textContent = instrucciones.classList.contains('visible') 
+                    ? "Cerrar instrucciones" 
+                    : "¿Cómo votar por esta Hamburguesa?";
+            }
+
+            function mostrarAdiciones() {
+                // Aquí puedes agregar la lógica para mostrar las adiciones
+                alert("Próximamente: Lista de adiciones disponibles");
+            }
+
+            function mostrarBebidas() {
+                // Aquí puedes agregar la lógica para mostrar las bebidas
+                alert("Próximamente: Lista de bebidas disponibles");
             }
         </script>
     </body>
