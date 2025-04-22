@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <title>SOLOMITOS</title>
+        <style>
+            :root {
+                --primary-color: #FF6B00;
+                --secondary-color: #FFA500;
+                --dark-color: #1A1A1A;
+            }
+            body {
+                background-color: var(--dark-color);
+            }
+            .header-custom {
+                background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+                color: white;
+            }
+            .btn-3d {
+                background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+                color: white;
+                border: none;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+                transition: transform 0.3s, box-shadow 0.3s;
+            }
+            .btn-3d:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+                color: white;
+            }
+            .footer {
+                background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+            }
+            .burger-card {
+                background: var(--dark-color);
+                border-radius: 15px;
+                overflow: hidden;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            }
+            .burger-img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                border-radius: 15px 15px 0 0;
+            }
+            .btn-whatsapp {
+                background-color: #25D366;
+                color: white;
+            }
+            .btn-whatsapp:hover {
+                background-color: #128C7E;
+                color: white;
+            }
+            #instrucciones {
+                display: none;
+                background: rgba(0,0,0,0.8);
+                border-radius: 10px;
+                padding: 20px;
+                margin: 15px 0;
+            }
+            .instrucciones-lista {
+                text-align: left;
+                padding-left: 20px;
+            }
+            .instrucciones-lista li {
+                margin-bottom: 10px;
+            }
+            .instrucciones-lista ul {
+                padding-left: 20px;
+                margin-top: 5px;
+            }
+            .instrucciones-lista a {
+                word-break: break-all;
+            }
+            @media (max-width: 768px) {
+                .burger-card {
+                    margin: 0 10px;
+                }
+                #instrucciones {
+                    padding: 15px;
+                    margin: 10px 0;
+                }
+                .instrucciones-lista {
+                    padding-left: 15px;
+                }
+                .instrucciones-lista li {
+                    margin-bottom: 8px;
+                    font-size: 0.95rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header-custom text-center py-4">
+            <div class="container">
+                <img src="./image/solomitosLogo.png" alt="Logo" class="img-fluid mb-2" style="max-width: 280px;">
+                <h1 class="h4">NUESTRO MENÚ</h1>
+                <h1 class="Horario">Horario: Lunes a domingo de 12pm a 10pm</h1>
+            </div>
+        </header>
+
+        <main class="container my-4">
+            <div class="row g-3 text-center justify-content-center">
+                <div class="col-12 col-md-8">
+                    <div class="burger-card">
+                        <img src="./image/hamburguesa.jpg" alt="The Fest Burger" class="burger-img">
+                        <div class="p-4">
+                            <h3 class="text-white">The Fest Burger</h3>
+                            <p class="text-white mb-4">¡Participando en el Burger Master de Tulio Recomienda!</p>
+                            
+                            <div class="d-grid gap-3">
+                                <button onclick="mostrarInstrucciones()" class="btn btn-warning py-3">
+                                    ¿Cómo votar por esta Hamburguesa?
+                                </button>
+
+                                <div id="instrucciones" class="text-white">
+                                    <div class="instrucciones-lista">
+                                        <ol>
+                                            <li>Descarga la app <strong>Tulio Recomienda</strong>:</li>
+                                            <ul>
+                                                <li><a href="https://play.google.com/store/apps/details?id=com.tuliorecomienda.app" target="_blank" class="text-warning">Android</a></li>
+                                                <li><a href="https://apps.apple.com/co/app/tulio-recomienda/id1459206812" target="_blank" class="text-warning">iPhone</a></li>
+                                            </ul>
+                                            <li>Abre la app y selecciona la ciudad: <strong>Caucasia</strong>.</li>
+                                            <li>Busca el restaurante: <strong>Solomitos</strong>.</li>
+                                            <li>Selecciona la hamburguesa <strong>The Fest Burger</strong>.</li>
+                                            <li>Califícala con las estrellas y ¡listo!</li>
+                                        </ol>
+                                    </div>
+                                </div>
+
+                                <a href="https://wa.me/+573136882500?text=Hola,%20quiero%20un%20The%20fest%20burger." class="btn btn-whatsapp py-3" target="_blank">
+                                    Pedir por WhatsApp domicilio
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <h4 class="text-white">Dirección</h4>
+                <p><a href="https://maps.app.goo.gl/oCDh2KCpmdvW9kVA9" target="_blank" class="text-decoration-none text-warning">📍Cra 20 N 2-39 LT03 Urb el lago Caucasia - Antioquia</a></p>
+                
+                <h4 class="text-white">Contáctanos</h4>
+                <div class="d-flex justify-content-center gap-3 my-3">
+                    <a href="tel:+573136882500">
+                        <img src="./imagenes/llamadas.png" alt="Llamar" style="width: 50px;">
+                    </a>
+                    <a href="#" target="_blank">
+                        <img src="./imagenes/facebook2.png" alt="Facebook" style="width: 50px;">
+                    </a>
+                    <a href="https://wa.me/+573136882500?text=¡Hola!%20Quiero%20hacer%20un%20pedido." target="_blank">
+                        <img src="./imagenes/whatsaap (2).png" alt="WhatsApp" style="width: 50px;">
+                    </a>
+                    <a href="https://www.instagram.com/solomitos_caucasia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                        <img src="./imagenes/instagram1.png" alt="Instagran" style="width: 50px;">
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer text-white text-center py-3">
+            <p>&copy; 2025 Solomitos Caucasia. Todos los derechos reservados.
+                <br>Emil Jiménez - Desarrollador Web 
+            </p>
+        </footer>
+
+        <script>
+            function mostrarInstrucciones() {
+                const instrucciones = document.getElementById("instrucciones");
+                instrucciones.style.display = instrucciones.style.display === "none" ? "block" : "none";
+            }
+        </script>
+    </body>
+</html>
