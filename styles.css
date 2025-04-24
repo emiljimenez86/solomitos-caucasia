@@ -123,17 +123,17 @@ h5.card-title{
 }
 
 .btn-detalles {
-    background-color: #e74c3c !important;
+    background-color: #007bff !important;
     color: white !important;
     border: none !important;
+    transition: background-color 0.3s ease !important;
+    width: 100% !important;
     padding: 10px 20px !important;
     font-size: 1rem !important;
-    transition: background-color 0.3s !important;
-    width: 100% !important;
 }
 
 .btn-detalles:hover {
-    background-color: #c0392b !important;
+    background-color: #0056b3 !important;
     color: white !important;
 }
 
@@ -271,6 +271,7 @@ h5.card-title{
 
 .instrucciones-lista li {
     margin-bottom: 10px;
+    color: white;
 }
 
 .instrucciones-lista ul {
@@ -285,7 +286,13 @@ h5.card-title{
 }
 
 .instrucciones-lista a:hover {
-    color: var(--primary-color) !important;
+    color: #007bff !important;
+}
+
+@media (min-width: 769px) {
+    #instrucciones {
+        display: none !important;
+    }
 }
 
 /* Estilos para detalles */

@@ -63,7 +63,8 @@
                                             <li>Abre la app y selecciona la ciudad: <strong>Caucasia</strong>.</li>
                                             <li>Busca el restaurante: <strong>Solomitos</strong>.</li>
                                             <li>Selecciona la hamburguesa <strong>The Fest Burger</strong>.</li>
-                                            <li>Califícala con las estrellas y ¡listo!</li>
+                                            <li>Califícala con las estrellas.</li>
+                                            <li>Déjanos un comentario en la votación y participa por una cena romántica para dos personas.</li>
                                         </ol>
                                     </div>
                                 </div>
@@ -104,38 +105,10 @@
 
         <footer class="footer text-white text-center py-3">
             <p>&copy; 2025 Solomitos Caucasia. Todos los derechos reservados.
-                <br>Emil Jiménez - Desarrollador Web 
+                <br>Emil Jiménez Ortiz - Desarrollador Web 
             </p>
         </footer>
 
-        <script>
-            function mostrarInstrucciones() {
-                const instrucciones = document.getElementById("instrucciones");
-                const boton = document.querySelector('.btn-warning');
-                
-                instrucciones.classList.toggle('visible');
-                boton.textContent = instrucciones.classList.contains('visible') 
-                    ? "Cerrar instrucciones" 
-                    : "¿Cómo votar por esta Hamburguesa?";
-            }
-
-            function mostrarDetalles() {
-                const detalles = document.getElementById("detalles");
-                const boton = document.querySelector('.btn-detalles');
-                
-                detalles.style.display = detalles.style.display === 'none' ? 'block' : 'none';
-                boton.textContent = detalles.style.display === 'none' ? "Ver Detalles" : "Ocultar Detalles";
-            }
-
-            function mostrarAdiciones() {
-                // Aquí puedes agregar la lógica para mostrar las adiciones
-                alert("Próximamente: Lista de adiciones disponibles");
-            }
-
-            function mostrarBebidas() {
-                // Aquí puedes agregar la lógica para mostrar las bebidas
-                alert("Próximamente: Lista de bebidas disponibles");
-            }
-        </script>
+        <script src="script.js"></script>
     </body>
 </html>
