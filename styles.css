@@ -355,6 +355,14 @@ h5.card-title{
     #detalles p {
         font-size: 0.95rem;
     }
+    .instrucciones-lista a {
+        color: #007bff !important;
+        text-decoration: underline;
+    }
+    
+    .instrucciones-lista a:hover {
+        color: #0056b3 !important;
+    }
 }
 
 @media (max-width: 576px) {
